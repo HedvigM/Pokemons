@@ -1,9 +1,15 @@
-import React from 'react'
+import React from "react";
+import { BrowserRouter, Switch, Route } from "react-router-dom";
+import List from "Components/List";
 
 export const App = () => {
   return (
-    <div>
-      Find me in src/app.js!
-    </div>
-  )
-}
+    <BrowserRouter>
+      <Switch>
+        <Route>
+          <List />
+        </Route>
+      </Switch>
+    </BrowserRouter>
+  );
+};
