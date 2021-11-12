@@ -11,3 +11,18 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+:root {
+  --main-color: #e9967a;
+  --secondary-color: #944c4c;
+  --main-font: "Courier New",
+  monospace;
+  --secondary-font: monospace;
+  --button-font: 15px monospace;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--main-font);
+}
+
+p {
+font-family: var(--secondary-font);
+}
