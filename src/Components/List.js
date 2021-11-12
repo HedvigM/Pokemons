@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
 const List = () => {
@@ -7,7 +8,6 @@ const List = () => {
     fetch('https://pokeapi.co/api/v2/pokemon')
       .then((response) => response.json())
       .then((data) => {
-        console.log(data.results);
         setPokemons(data.results);
       });
   }, []);
@@ -17,7 +17,13 @@ const List = () => {
       <PokemonList>
         <h1>Pokemon List</h1>
         {pokemons.map((pokemon) => (
-          <p>{pokemon.name}</p>
+          <Link
+            key={pokemon.name}
+            to={`/details/${pokemon.name}`}
+            /*  className='pokemon-list' - ANVÄNDS INTE JUST NU */
+          >
+            <p>{pokemon.name}</p>
+          </Link>
         ))}
       </PokemonList>
     </Container>
