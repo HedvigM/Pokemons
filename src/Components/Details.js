@@ -15,11 +15,8 @@ export const Details = () => {
   }, [pokemon]);
 
   return (
-    <div>
+    <div className='container'>
       <h1>The detail site!</h1>
-      <h2>Name : {details.name}</h2>
-      <h2>Height : {details.height}</h2>
-      <h2>Weight : {details.weight}</h2>
       <img
         src={
           details.sprites
@@ -27,6 +24,9 @@ export const Details = () => {
             : ''
         }
       />
+      <h2>Name : {details.name}</h2>
+      <h2>Height : {details.height}</h2>
+      <h2>Weight : {details.weight}</h2>
     </div>
   );
 };

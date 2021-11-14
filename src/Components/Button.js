@@ -20,7 +20,7 @@ const PartyButton = styled.button`
   transition-duration: 0.4s;
   box-shadow: none;
   margin: 10px;
-  font-family: var(--secondary-font);
+  font-family: var(--button-font);
 
   :hover {
     background-color: white;
